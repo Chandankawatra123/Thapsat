@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@font-face {
+  font-family: "Inter";
+  src: url("../../fonts/Inter-VariableFont_slnt\,wght.ttf");
+  font-weight: 100 1000;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+.CodeAsia {
+  display: inline-block;
+  position: absolute;
+  bottom: 3.2%;
+  right: 15%;
+  z-index: -1;
+  width: 70%;
+}
+.CodeAsia2,
+.CodeAsia3 {
+  display: none;
+  position: absolute;
+  bottom: 3.2%;
+  right: 12%;
+  z-index: -1;
+  width: 70%;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 5% 10%;
+  margin-top: 5%;
+  font-family: "Cabin";
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5.5px);
+  border-radius: 32px 32px 0px 0px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  margin-bottom: 2em;
+  justify-content: space-between;
+}
+
+.footer div {
+  box-sizing: border-box;
+}
+
+.footer a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: opacity 0.5s ease;
+}
+
+.footer a:not(.footer-logo h1, .footer-copyright a:first-of-type):hover {
+  opacity: 0.5;
+}
+
+.footer h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.875rem;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 3em;
+  margin-left: 3rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  width: 10rem;
+}
+.footer-cols {
+  width: 40rem;
+  margin-right: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer-logo:last-child {
+  display: none;
+}
+.footer-col a,
+.footer-copyright a {
+  padding: 0.5em;
+  text-align: left;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer-copyright {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-copyright a:first-of-type {
+  margin-right: auto;
+}
+.underline {
+  width: 100%;
+}
+.code h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1035px) {
+  .footer{
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(0.5px);
+    border-radius: 32px 32px 0px 0px;
+  }
+  .CodeAsia {
+    display: none;
+  }
+  .CodeAsia2 {
+    display: block;
+    bottom: 2%;
+  }.CodeAsia3{
+    display: none;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-columns: 3/3fr; */
+    /* grid-template-rows: 1fr 1fr 1fr; */
+  }
+  .footer-logo {
+    display: none;
+  }
+  .footer-logo:last-child {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+  }
+  .footer a {
+    font-size: 16px;
+  }
+  .footer-copyright {
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .CodeAsia2 {
+    display: none;
+  }.CodeAsia3{
+    display: block;
+    bottom: 1%;
+    /* background-size: cover;
+    background-position: center;
+    object-fit: fill; */
+  }
+  .footer-links {
+
+    /* border: 2px solid red; */
+  }
+  .footer-cols{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    /* grid-template-columns: repeat(1, 1fr);
+     */
+     gap: 1rem;
+  }
+  .footer-col{
+    display: grid;
+    width: fit-content;
+    /* border: 2px solid red;
+    height: fit-content; */
+  }
+  .footer-logo {
+    padding-right: 0;
+  }
+  .footer-socials {
+    justify-content: space-between;
+  }
+  .footer-socials a {
+    padding: 0 0.5em;
+    /* border: 2px solid firebrick; */
+  }
+  .footer-links {
+    flex-direction: column;
+  }
+  .footer-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-copyright {
+    flex-direction: column;
+  }
+  .footer-copyright a:first-of-type {
+    margin-right: 0;
+    padding-left: 0.5em !important;
+  }
+}

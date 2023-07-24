@@ -1,0 +1,295 @@
+.popup-container {
+  background-color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 90vw;
+  padding: 0.4%;
+  height: 90%;
+  z-index: 101;
+  border-radius: 15px;
+  margin: 5vh auto;
+  border-radius: 30px;
+  overflow-y: scroll;
+  background: radial-gradient(
+      circle at 10% 10%,
+      rgba(180, 31, 184, 0.4),
+      transparent 550px
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(2, 255, 225, 0.2),
+      transparent 550px
+    ),
+    black;
+}
+
+.popup-container::-webkit-scrollbar{
+  display: none;
+}
+
+.popup-container .joinfoot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 10%;
+  margin-top: 3%;
+  margin-bottom: 2rem;
+}
+.joinfoot span {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.joinfoot span li {
+  list-style: none;
+}
+
+.popup-community {
+  display: flex;
+}
+
+.popup-col {
+  flex-basis: 40%;
+  flex-grow: 1;
+}
+.popup-col.round-bg  #desktop-stats h3{
+  font-size: 21px;
+}
+
+.popup-col.round-bg {
+  border-radius: 30px;
+  padding: 1% 2%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.popup-title {
+  padding: 2% 0;
+}
+
+.modal-close-btn {
+  position: absolute;
+  display: flex;
+  padding: 0.15%;
+  right: 25px;
+  top: 42px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.5s ease;
+  background: #B4B5B1;
+  border-radius: 50%;
+}
+
+.modal-close-btn:hover {
+  opacity: 0.5;
+}
+
+
+.individual-cards {
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.individual-cards input {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 1.5em;
+  border-bottom: 2px solid #35353b;
+  color: white;
+  outline: none;
+  display: inline-block;
+  width: 100%;
+  transition: border-bottom 0.5s ease;
+}
+
+.individual-cards input:focus {
+  border-bottom: 2px solid white;
+}
+
+.popup-questions {
+  margin-bottom: 30%;
+}
+
+.radio-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio-option input {
+  margin-right: 0.5em;
+}
+
+.radio-options h3 {
+  flex-basis: 100%;
+}
+
+.popup-questions input[type="radio"] {
+  width: auto;
+}
+
+.popup-questions input[type="radio"] + label {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.popup-questions input[type="radio"]:focus + label {
+  color: rgba(255, 255, 255, 1);
+}
+
+.radio-option {
+  padding: 0.45em;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  margin-right: 0.5em;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.radio-option.selected {
+  border: 2px solid white;
+}
+
+.progress {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.progress-btns {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.progress-btns svg,
+.progress-btns button {
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+  margin-right: 0.5em;
+}
+
+.progress-btns button {
+  height: 39px;
+  display: inline-block;
+  background: #0656eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.progress-btns svg:hover,
+.progress-btns:hover button {
+  opacity: 0.8;
+}
+
+.progress-bar {
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 8px;
+  background: rgba(46, 46, 46, 0.5);
+}
+
+.progress-mover {
+  background: #0656eb;
+  border-radius: 10px;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .progress-btns {
+    margin-top: 0.5em;
+  }
+  .radio-option {
+    margin-bottom: 0.5em;
+  }
+  .popup-container > div {
+    padding: 4% !important;
+  }
+  .popup-container {
+    height: 90vh !important;
+    overflow-y: scroll;
+  }
+  .popup-questions{
+    margin-top: 2rem;
+  } 
+.progress {
+  margin-top: -5rem;
+  /* border: 2px solid red; */
+}
+}
+
+@media (max-width: 645px) {
+  .nav-menu{
+    display: none;
+  }
+}
+
+@media (max-height: 570px) {
+  .popup-container {
+    overflow-y: scroll;
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .popup-container {
+    height: 70vh !important;
+    overflow-y: scroll;
+  }
+  .page-section {
+    align-items: flex-start;
+    border: 2px solid red;
+  }
+  .popup-col h3{
+    /* border: 2px solid red; */
+    font-size: 15px;
+  }
+  .popup-col p {
+    display: none;
+  }
+  .popup-col.round-bg {
+    border: 2px solid transparent !important;
+    background: transparent !important;
+    z-index: inherit;
+  }
+  #desktop-stats {
+    display: none;
+  }
+  .individual-cards {
+    padding: 0 0.5em;
+  }
+  .popup-title {
+    margin: 2em 0;
+  }
+  .popup-questions {
+    margin-bottom: 15%;
+  }
+  .popup-questions input {
+    font-size: 16px;
+  }
+  .popup-col.mobile-left-col {
+    display: block !important;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  .radio-option {
+    margin-bottom: 0.5em;
+  }
+  .progress {
+    margin-top: 0rem;
+  }
+  .popup-container .joinfoot {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

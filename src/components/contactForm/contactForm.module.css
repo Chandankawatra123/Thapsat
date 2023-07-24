@@ -1,0 +1,77 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  border-radius: 30px;
+  background: linear-gradient(210.53deg, rgba(64, 79, 73, 0.54) -14.07%, rgba(64, 79, 75, 0.18) 109.23%);
+  padding: 5% 8%;
+  align-items: center;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-question {  
+  box-sizing: border-box;
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 1em;
+  margin-top: 0;
+}
+
+.form-question input, .form-question select, .form-question textarea {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .5);
+  transition: background-color .5s ease;
+  outline: none;
+  border: 0;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  color: white;
+  display: block;
+}
+
+.form-question select {
+  min-width: 301px;
+}
+
+.form-question option {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.form-question label, .form-question h3 {
+  display: block;
+  width: 100%;
+}
+
+.form-question input:focus, .form-question select:focus, .form-question textarea:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form {
+    width: 80%;
+  }  
+  .form-question select {
+    min-width: 0;
+  }
+  .form-question {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

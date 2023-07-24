@@ -1,0 +1,53 @@
+{
+  "name": "codeasia-website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "file-system": "^2.2.2",
+    "framer-motion": "^5.2.1",
+    "mongodb": "4.1.1",
+    "next": "^11.1.2",
+    "node-fetch": "2.6.1",
+    "nodemailer": "6.6.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-dropdown-select": "^4.9.3",
+    "react-select": "^5.7.0",
+    "react-spring": "^9.3.0",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "next dev",
+    "start-production": "next start",
+    "build": "next build",
+    "lint": "next lint",
+    "dev": "next dev"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^11.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "11.1.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.9.0",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
+}

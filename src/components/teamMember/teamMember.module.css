@@ -1,0 +1,67 @@
+.team-member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.team-member-card .member-pic {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  border: 2px solid #3377FF;
+}
+
+.team-member-card h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.team-member-card p {
+  color: #B2AAAA;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .team-member-card .member-pic {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .team-member-card .member-pic {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* @media screen and (max-width: 350px) {
+  .team-member-card .member-pic {
+    width: 75px;
+    height: 75px;
+  }
+} */
+
+/* Animation Scripts from Ali */
+@keyframes hoverCardAnimation {
+  0%{
+    opacity: 0;
+    transform: translate(0%);
+  }
+  50%{
+    opacity: 0.5;
+    transform: translate(5%);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(10%)
+  }
+}
+
+.animation-card:hover{
+    animation: hoverCardAnimation 2s linear;
+}
