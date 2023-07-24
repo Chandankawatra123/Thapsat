@@ -29,23 +29,27 @@ function JoinUs(props) {
         global.currentPage = 0;
         
 
-       goNext = function() {
+// Helper function to validate email format
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Function to handle moving to the next form section
+function goNext() {
   const formP = document.getElementById("formP" + global.currentPage);
-  
-  // Check if the form section element exists
+
   if (formP === null) {
     return; // Exit the function if the element is not found
   }
-  
-  const requiredFields = formP.querySelectorAll('input[required]');
 
-  // Check if any required field is empty or email field is invalid
+  const requiredFields = formP.querySelectorAll('input[required]');
   const emptyFields = Array.from(requiredFields).filter(field => field.value.trim() === '');
   const invalidEmailFields = Array.from(requiredFields).filter(field => field.type === 'email' && !isValidEmail(field.value));
 
+  const errorMessage = document.getElementById("errorMessage");
+
   if (emptyFields.length > 0 || invalidEmailFields.length > 0) {
-    // Display an error message on the screen
-    const errorMessage = document.getElementById("errorMessage");
     if (invalidEmailFields.length > 0) {
       errorMessage.textContent = "Please ensure that email fields are valid.";
     } else {
@@ -53,43 +57,30 @@ function JoinUs(props) {
     }
     errorMessage.style.display = "block";
   } else {
-    // Hide the error message if it's currently visible
-    const errorMessage = document.getElementById("errorMessage");
     errorMessage.style.display = "none";
 
-    // Proceed to the next form section
     formP.style.display = "none";
     global.currentPage = global.currentPage + 1;
     const nextFormP = document.getElementById("formP" + global.currentPage);
-    
-    // Check if the next form section element exists
+
     if (nextFormP !== null) {
       nextFormP.style.display = "block";
+    } else {
+      // If there is no next form section, call sendFormData function
+      sendFormData();
     }
   }
 }
 
-// Helper function to validate email format
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-
-
-
-let formSubmitted = false; // Variable to track if the form has been submitted
-
-// Add event listener to input fields to trigger goNext, sendFormData, or goBack on Enter key press
+// Rest of the code remains the same
 document.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
-    if (global.currentPage <= 3) {
+    if (global.currentPage <= 4 && global.currentPage !== 3) {
       goNext();
     }
+  
   }
 });
-
-
 
 
 
