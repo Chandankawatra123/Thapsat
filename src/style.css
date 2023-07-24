@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+
 @font-face {
   font-family: "Inter";
   src: url("./fonts/Inter-VariableFont_slnt\,wght.ttf");
@@ -33,23 +36,8 @@
     #040d21 76.56%,
     #0d77f3 100%
   );
-  --gradient-1: linear-gradient(
-    90.26deg,
-    #1a6aff 0%,
-    #d817f8 49.45%,
-    #ffa51e 99.95%
-  );
-  --gradient-2: linear-gradient(
-    99.01deg,
-    rgba(77, 228, 138, 0.4567) 0%,
-    rgba(238, 88, 43, 0.6) 51.04%,
-    rgba(32, 137, 249, 0.6) 100%
-  );
-  --yellow: #ff8c19;
-  --orange: #fe6734;
-  --pink: #b41fb8;
-  --green: #3bb179;
-  --blue: #0656eb;
+  --gradient-1: linear-gradient(90.26deg,#1a6aff,#d817f8 49.45%,#ffa51e 99.95%);
+  --gradient-2: linear-gradient(99.01deg,rgba(77,228,138,0.457),rgba(238,88,43,0.6) 51.04%,rgba(32,137,249,0.6));
 }
 
 html {
@@ -223,11 +211,6 @@ body.contact {
   position: relative;
   cursor: pointer;
   width: fit-content;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
 }
 .link-btn span {
   display: flex;
@@ -246,11 +229,16 @@ body.contact {
   bottom: 0;
   padding: 2px;
   border-radius: 15px;
-  background: var(--gradient-1);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   animation: none;
+  background: var(--gradient-1);
+  
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+ 
+
+  
+  -webkit-mask-composite: destination-out ;
+
 }
 
 .party {
@@ -432,7 +420,7 @@ body.contact {
   position: relative;
   border: 2px solid transparent;
   border-image-slice: 1;
-  background: linear-gradient(180deg, #040f26 0%);
+  background: -webkit-gradient(linear,left top,left bottom,from(#040f26));
   width: 92%;
   box-sizing: border-box;
   background-clip: padding-box;
@@ -872,6 +860,7 @@ body.contact {
   left: 0;
   z-index: -1;
   margin: -2px;
+  
   border-radius: inherit;
   background-image: linear-gradient(
     93.84deg,
@@ -1030,7 +1019,7 @@ body.contact {
   border-radius: 20px;
   border-image-slice: 1;
   position: relative;
-  background: linear-gradient(180deg, #040f26 0%);
+  background: -webkit-gradient(linear,left top,left bottom,from(#040f26));
   box-sizing: border-box;
   background-clip: padding-box;
   font-size: 20px;
@@ -1329,6 +1318,7 @@ body.contact {
   .rgba-block {
     display: flex;
     flex-direction: column-reverse;
+    
     padding-bottom: 0;
   }
   .btn-below {

@@ -15,14 +15,14 @@ export default function showcase() {
                     <div className="droptext">
                         <span>Its totally free! </span>
                         <div className="arrow">
-                            <Image src={arrowRight} alt='' width={30} height={30} />
+                            <Image src={arrowRight} alt='' width={30} height={30} loading="lazy" />
                         </div>
                     </div>
                     <div className="infos"> 
                         <input type='text' placeholder='Name' />
                         <input type='text' placeholder='Email Address' />
                         <button>Join The Party 🎉
-                            <Image src={arrow} width={15} height={15} />
+                            <Image src={arrow} width={15} height={15} loading="lazy" />
                         </button>
                     </div>
                 </div>

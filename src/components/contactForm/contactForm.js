@@ -1,7 +1,9 @@
+import { useState, useEffect } from 'react';
+import Image from "next/image";
 import styles from "./contactForm.module.css";
 
 function ContactForm(props) {
-  return(
+  return (
     <form className={styles["contact-form"]}>
       <h2>We Would Love to Hear from You!</h2>
       <div className={styles["form-row"]}>
@@ -12,7 +14,7 @@ function ContactForm(props) {
         <div className={styles["form-question"]}>
           <label htmlFor="last-name"><h3>Last Name</h3></label>
           <input type="text" name="last-name"></input>
-        </div>        
+        </div>
       </div>
       <div className={styles["form-row"]}>
         <div className={styles["form-question"]}>
@@ -35,14 +37,14 @@ function ContactForm(props) {
       <div className={styles["form-row"]}>
         <div className={styles["form-question"]}>
           <label htmlFor="subject"><h3>Your Message</h3></label>
-          <textarea name="message" style={{height: "8em", fontFamily: "Cabin"}}></textarea>
-        </div>  
-      </div>
-      <div className={styles["form-row"]} style={{marginTop: "2em"}}>
-          <a className="link-btn">Submit</a>
+          <textarea name="message" style={{ height: "8em", fontFamily: "Cabin" }}></textarea>
         </div>
+      </div>
+      <div className={styles["form-row"]} style={{ marginTop: "2em" }}>
+        <a className="link-btn">Submit</a>
+      </div>
     </form>
-  )
+  );
 }
 
 export default ContactForm;

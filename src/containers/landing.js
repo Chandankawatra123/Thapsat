@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import Navbar from "../components/navbar/navbar.js";
 import Footer from "../components/footer/footer.js";
 import Banner from "../components/banner/banner.js";
@@ -20,8 +19,6 @@ import Showcase from "../components/showcase/showcase"
 import free2 from "../img/free-up-white.svg";
 import { useEffect, useState } from "react";
 
-
-
 function Landing(props) {
   const [screenWidth, setScreenWidth] = useState();
 
@@ -40,9 +37,19 @@ function Landing(props) {
   return (
     <>
       <div className="page-container">
-        {screenWidth > 1050 ? <Banner bannerHeading="Interested In Robotics?" bannerMsg="Join our first workshop, centred on robotics, and meet brilliant people from around the globe!" bannerLink="https://zq05jpsqect.typeform.com/to/V0N4H8aj" />
-          : <Banner bannerHeading="Interested In Robotics?" bannerMsg="Join our first workshop, centered on robotics..." bannerLink="https://zq05jpsqect.typeform.com/to/V0N4H8aj" />
-        }
+        {screenWidth > 1050 ? (
+          <Banner
+            bannerHeading="Interested In Robotics?"
+            bannerMsg="Join our first workshop, centred on robotics, and meet brilliant people from around the globe!"
+            bannerLink="https://zq05jpsqect.typeform.com/to/V0N4H8aj"
+          />
+        ) : (
+          <Banner
+            bannerHeading="Interested In Robotics?"
+            bannerMsg="Join our first workshop, centered on robotics..."
+            bannerLink="https://zq05jpsqect.typeform.com/to/V0N4H8aj"
+          />
+        )}
         <Navbar />
         <div className="page-title">
           <div className="block" style={{ flexBasis: "45%", marginLeft: '-1.5%'}}>
@@ -63,30 +70,30 @@ function Landing(props) {
             </a>
           </div>
           <div id="landing-community" className="block">
-            <Image src={community} className='commmunity' alt='' />
+            <Image src={community} className='commmunity' alt='' loading="lazy" />
           </div>
         </div>
         <div className="page-section gradient-bg-right" style={{ justifyContent: "space-around", alignItems: "flex-start", marginLeft: '2rem' }}>
           <div className="landing-four-col">
             <div className="block">
-              <Image src={people}></Image>
+              <Image src={people} loading="lazy" />
               <h5>Diverse Community</h5>
               <p>You’re not alone. Learn and get help from our friendly community of beginner and experienced developers.</p>
             </div>
             <div className="block">
-              <Image src={bulb}></Image>
+              <Image src={bulb} loading="lazy" />
               <h5>Collaborate Knowledge</h5>
               <p>Exclusive exposure to industry experts and get a chance to learn from them.</p>
             </div>
           </div>
           <div className="landing-four-col">
             <div className="block">
-              <Image src={message}></Image>
+              <Image src={message} loading="lazy" />
               <h5>Instant Feedback</h5>
               <p>Your code is tested as soon as you send it in, so you always know if you're on the right track.</p>
             </div>
             <div className="block">
-              <Image src={ticket}></Image>
+              <Image src={ticket} loading="lazy" />
               <h5>Skill-Building Events</h5>
               <p>Participate in high-quality, engaging events and learn skills.</p>
             </div>
@@ -94,13 +101,13 @@ function Landing(props) {
         </div>
         <div className="page-section landing-two-col">
           <div className="block" style={{ flexBasis: "45%"}}>
-            <Image src={landing1} layout="responsive"></Image>
+            <Image src={landing1} layout="responsive" loading="lazy" />
           </div>
           <div className="block" style={{ flexBasis: "40%", marginRight: '2rem'}}>
             <h1>Turn The <span className="highlight-yellow">Career</span> Of Your <span className="highlight-orange">Dreams</span> Into Reality 🚀</h1>
             <div className="landing-two-col-inline">
               <div className="landing-two-col-icon">
-                <Image layout="responsive" src={research} />
+                <Image layout="responsive" src={research} loading="lazy" />
               </div>
               <div className="landing-two-col-p">
                 <h5>Exploration: 🌍</h5>
@@ -109,7 +116,7 @@ function Landing(props) {
             </div>
             <div className="landing-two-col-inline">
               <div className="landing-two-col-icon">
-                <Image layout="responsive" src={exploration} />
+                <Image layout="responsive" src={exploration} loading="lazy" />
               </div>
               <div className="landing-two-col-p">
                 <h5>Research: 📖</h5>
@@ -118,7 +125,7 @@ function Landing(props) {
             </div>
             <div className="landing-two-col-inline">
               <div className="landing-two-col-icon">
-                <Image layout="responsive" src={action} />
+                <Image layout="responsive" src={action} loading="lazy" />
               </div>
               <div className="landing-two-col-p">
                 <h5>Action: 🎯</h5>
@@ -134,12 +141,12 @@ function Landing(props) {
             <p>We provide you with a <span className="highlight-green">clear path</span> that leads your hobbies/passions into meaningful careers. Join us today for all the thrill & excitement!</p>
           </div>
           <div className="block" style={{ flexBasis: "50%", marginLeft: 'auto' ,marginRight: '0rem' }}>
-            <Image src={landing2} layout="responsive"></Image>
+            <Image src={landing2} layout="responsive" loading="lazy" />
           </div>
         </div>
         <div className="page-section landing-two-col">
           <div className="block" style={{ flexBasis: "40%" }}>
-            <Image src={landing3} layout="responsive"></Image>
+            <Image src={landing3} layout="responsive" loading="lazy" />
           </div>
           <div className="block" style={{ flexBasis: "40%", marginRight: '2rem' }}>
             <h1>Make <span className="highlight-blue">Partners</span> & Boost Your Work Efficiency. </h1>

@@ -1,6 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
+import React from "react";
+import Image from "next/image";
 import styles from "./Footer.module.css";
-import Image from "next/image"
 import twitter from "../../icons/twitter.svg";
 import instagram from "../../icons/instagram.svg";
 import linkedin from "../../icons/linkedin.svg";
@@ -14,13 +14,13 @@ function Footer(props) {
   return (
     <>
       <div className={styles.CodeAsia}>
-        <Image src={CodeAsia} alt='' width={1000} height={200}/>
+        <Image src={CodeAsia} alt='' width={1000} height={200} loading="lazy" />
       </div>
       <div className={styles.CodeAsia2}>
-        <Image src={CodeAsiaSmall} alt='' width={1200} height={1100}/>
+        <Image src={CodeAsiaSmall} alt='' width={1200} height={1100} loading="lazy" />
       </div>
       <div className={styles.CodeAsia3}>
-        <Image src={CodeAsiaSmall} alt='' width={1200} height={2000}/>
+        <Image src={CodeAsiaSmall} alt='' width={1200} height={2000} loading="lazy" />
       </div>
       <footer className={styles.footer}>
         <div className={styles["footer-links"]}>
@@ -76,7 +76,7 @@ function Footer(props) {
           </div>
         </div>
         <div className={styles["underline"]}>
-          <Image src={line} alt='' width={2000} height={50} />
+          <Image src={line} alt='' width={2000} height={50} loading="lazy" />
         </div>
         <div className={styles["footer-copyright"]}>
           <a style={{ paddingLeft: "0.5rem" }}>© 2023 CodeAsia. 501(c)(3) nonprofit (EIN 81-1543325).</a>
@@ -85,7 +85,7 @@ function Footer(props) {
         </div>
       </footer>
     </>
-  )
+  );
 }
 
 export default Footer;

@@ -1,7 +1,7 @@
-import styles from "./event.module.css";
+import { useState } from "react";
 import Image from "next/image";
 import defaultImg from "../../img/event.png";
-import { useState } from "react";
+import styles from "./event.module.css";
 
 function Event(props) {
   var eventTagElements = [];
@@ -11,7 +11,7 @@ function Event(props) {
       <>
         <div className={styles["event-card"]}>
           <div className={styles["event-img"]}>
-            <Image src={props.eventImg} alt='event-img'/>
+            <Image src={props.eventImg} alt='event-img' loading="lazy" />
           </div>
           <div className={styles["event-text"]}>
             <h2>{props.eventName}</h2>
@@ -28,15 +28,14 @@ function Event(props) {
           </div>
         </div>
       </>
-    )
-  }
-  else {
+    );
+  } else {
     return (
       <>
         <div className={styles["event-body2"]}>
           <div className={styles["event-card2"]}>
             <div className={styles["event-img"]}>
-              <Image src={defaultImg} />
+              <Image src={defaultImg} loading="lazy" />
             </div>
             <div className={styles["event-text"]}>
               <h2>{props.eventName}</h2>
@@ -54,9 +53,8 @@ function Event(props) {
           </div>
         </div>
       </>
-    )
+    );
   }
-
 }
 
 export default Event;

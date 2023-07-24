@@ -1,6 +1,4 @@
-.event-body {
-  /* border: 2px solid red; */
-}
+
 
 .event-card,
 .event-date-time,
@@ -24,12 +22,13 @@
   border-radius: 20px;
   border-image-slice: 1;
   position: relative;
-  background: linear-gradient(180deg, #040f26 0%);
+  /* background: linear-gradient(180deg, #040f26 0%); */
   box-sizing: border-box;
   background-clip: padding-box;
   font-size: 20px;
   color: white;
   text-decoration: none;
+      background: -webkit-gradient(linear,left top,left bottom,from(#040f26));
 }
 .event-card::before,
 .event-card2::before {
@@ -40,7 +39,7 @@
   bottom: 0;
   left: 0;
   z-index: -1;
-  margin: -2px;
+  margin: -5px;
   border-radius: inherit;
   background-image: linear-gradient(
     93.84deg,

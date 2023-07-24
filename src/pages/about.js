@@ -12,15 +12,25 @@ import free2 from "../img/free-up-white.svg";
 import underline from "../img/underline.svg";
 import growing from "../img/about-growing.png";
 import Showcase from "../components/showcase/showcase.js";
-import { useEffect } from "react";
 import JoinUs from "../components/joinUs/joinUs.js";
 import { motion } from "framer-motion";
 
+import { useState, useEffect } from "react";
 
 function About(props) {
+  const [teamMembers, setTeamMembers] = useState(25);
+  const [communityMembers, setCommunityMembers] = useState(200);
+  const [socialMediaFollowers, setSocialMediaFollowers] = useState(200);
+
   useEffect(() => {
-    document.querySelector("body").classList.add("about");
-  });
+    const interval = setInterval(() => {
+      setTeamMembers((prevTeamMembers) => Math.floor(Math.random() * 1000));
+      setCommunityMembers((prevCommunityMembers) => Math.floor(Math.random() * 1000));
+      setSocialMediaFollowers((prevSocialMediaFollowers) => Math.floor(Math.random() * 1000));
+    }, 1000); // Update every 1000 milliseconds (1 second)
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -54,17 +64,17 @@ function About(props) {
         <div className="page-section" id="about-stats">
           <div className="landing-four-col" id="about-stats-col">
             <div className="block" style={{ flexBasis: "50%" }}>
-              <h1>25+</h1>
+            <h1>{teamMembers}+</h1>
               <h2>team <br /> members</h2>
             </div>
             <div className="block" style={{ flexBasis: "50%" }}>
-              <h1>200+</h1>
+            <h1>{communityMembers}+</h1>
               <h2>community <br /> members</h2>
             </div>
           </div>
           <div className="landing-four-col" id="about-stats-col">
             <div className="block" style={{ flexBasis: "50%" }}>
-              <h1>200+</h1>
+            <h1>{socialMediaFollowers}+</h1>
               <h2>social media <br /> followers</h2>
             </div>
             <div className="block" style={{ flexBasis: "50%" }}>
@@ -77,23 +87,23 @@ function About(props) {
           <Image src={growing} />
         </div>
         <div className="wave">
-          <Image src={wave2} className="wave" style={{ width: "100vw" }}></Image>
+          <Image src={wave2} className="wave" style={{ width: "100vw" }} loading="lazy"></Image>
         </div>
         <div className="page-section">
           <div id="block">
-            <Image src={quote} alt='' style={{ width: '100%', height: "100%" }} />
+            <Image src={quote} alt='' style={{ width: '100%', height: "100%" }} loading="lazy" />
             <h4>“People try to force an interest over themselves, but passion chooses the individuals, rather than them trying to choose it.”</h4>
             <h1 style={{ textAlign: "center" }}><span className="gradient-text-static">Jeff Bezos</span></h1>
             <h2 style={{ textAlign: "center" }}>former Chairman and CEO of Amazon</h2>
           </div>
         </div>
         <div className="wave">
-          <Image src={wave2} className="wave"></Image>
+          <Image src={wave2} className="wave" loading="lazy"></Image>
         </div>
         <div className="page-section" style={{ justifyContent: "center" }}>
           <div className="title">
             <h5>Our Mission And Vision 🚀</h5>
-            <Image src={underline} alt='' />
+            <Image src={underline} alt='' loading="lazy" />
           </div>
           <div className="cardcontainer">
             <div className="card">

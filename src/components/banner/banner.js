@@ -1,8 +1,8 @@
+import { useState, useEffect } from 'react';
+import Image from "next/image";
 import styles from "./Banner.module.css";
 import banner from "../../icons/banner.svg";
 import closeIcon from "../../icons/close.svg";
-import Image from "next/image";
-import { useState, useEffect } from 'react';
 
 function Banner(props) {
   const [showBanner, setShowBanner] = useState(true);
@@ -18,12 +18,12 @@ function Banner(props) {
     }    
   }, [])
   
-  if(showBanner && screenWidth > 350) {    
-    return(
+  if (showBanner && screenWidth > 350) {    
+    return (
       <div className={styles["banner"]}>
         <div>
           <div className={styles["banner-img"]}>
-            <Image src={banner}/>
+            <Image src={banner} loading="lazy" />
           </div>
           <div className={styles["banner-text"]}>
             <h3>{props.bannerHeading}</h3>
@@ -31,20 +31,19 @@ function Banner(props) {
           </div>
         </div>
         <div>
-          <a className={`${styles["banner-link-btn"]} link-btn`} rel="external noreferrer" target="_blank" href={props.bannerLink} style={{fontSize: '17px'}}>Register Now</a>
+          <a className={`${styles["banner-link-btn"]} link-btn`} rel="external noreferrer" target="_blank" href={props.bannerLink} style={{ fontSize: '17px' }}>Register Now</a>
           <a onClick={closeBanner} className={styles["banner-close"]}>
-            <Image src={closeIcon} alt="" />
+            <Image src={closeIcon} alt="" loading="lazy" />
           </a>
         </div>
       </div>
-    )
-  }
-  else if(showBanner && screenWidth <= 350) {
-    return(
+    );
+  } else if (showBanner && screenWidth <= 350) {
+    return (
       <div className={styles["banner"]}>
         <div>
           <div className={styles["banner-img"]}>
-            <Image src={banner}/>
+            <Image src={banner} loading="lazy" />
           </div>
           <div className={styles["banner-text"]}>
             <h3>{props.bannerHeading}</h3>
@@ -53,14 +52,13 @@ function Banner(props) {
         </div>
         <div>
           <a onClick={closeBanner} className={styles["banner-close"]}>
-            <Image src={closeIcon} alt="" />
+            <Image src={closeIcon} alt="" loading="lazy" />
           </a>
         </div>
       </div>
-    )
-  }
-  else {
-    return(null)
+    );
+  } else {
+    return null;
   }
 }
 

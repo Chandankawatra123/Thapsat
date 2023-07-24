@@ -9,12 +9,15 @@ import { useSpring, animated } from 'react-spring'; // Importing and using react
 import { motion, useAnimation } from "framer-motion";
 import LazyShow from "./../components/animatons/lazyShow.js";
 import Showcase from "../components/showcase/showcase.js";
+import Image from "next/image";
+import bannerImage from "../components/banner/banner.js"; // Replace this with the actual path to your banner image
 
 function Events(props) {
   const [screenWidth, setScreenWidth] = useState();
+
   useEffect(() => {
     document.querySelector("body").classList.add("events");
-  }); 
+  });
 
   useEffect(() => {
     if (window) {
@@ -25,22 +28,32 @@ function Events(props) {
     }
   }, [])
 
-  return(
+  return (
     <>
       <div className="page-container">
-      {screenWidth > 1050 ? <Banner bannerHeading="Interested In Robotics?" bannerMsg="Join our first workshop, centred on robotics, and meet brilliant people from around the globe!" bannerLink="https://zq05jpsqect.typeform.com/to/V0N4H8aj" />
-          : <Banner bannerHeading="Interested In Robotics?" bannerMsg="Join our first workshop, centered on robotics..." bannerLink="https://zq05jpsqect.typeform.com/to/V0N4H8aj" />
-        }
+        {screenWidth > 1050 ? (
+          <Banner
+            bannerHeading="Interested In Robotics?"
+            bannerMsg="Join our first workshop, centred on robotics, and meet brilliant people from around the globe!"
+            bannerLink="https://zq05jpsqect.typeform.com/to/V0N4H8aj"
+          />
+        ) : (
+          <Banner
+            bannerHeading="Interested In Robotics?"
+            bannerMsg="Join our first workshop, centered on robotics..."
+            bannerLink="https://zq05jpsqect.typeform.com/to/V0N4H8aj"
+          />
+        )}
         <Navbar />
         <LazyShow>
-        <EventGrid/>    
-        </LazyShow> 
-          <Showcase />
+          <EventGrid />
+        </LazyShow>
+        <Showcase />
         <Footer />
-      </div>      
+      </div>
       <JoinUs />
     </>
-  )
+  );
 }
 
 export default Events;
