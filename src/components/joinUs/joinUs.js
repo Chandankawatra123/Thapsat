@@ -525,7 +525,7 @@ document.addEventListener("keydown", function(event) {
                 </div>
                 <div className={styles["individual-cards"]} id="formP6" style={{ display: "none" }}>
                   <div className={styles["popup-questions"]}>
-                    <h5 id="resultMessage"><p>Thanks For filling out the form. We'll review your request and send you the Slack Request at your registered email address ✅ </p>
+                    <h5 id="resultMessage">Thanks For filling out the form. We'll review your request and send you the Slack Request at your registered email address ✅ <br/><br/>
 
                     Until then, please make sure to check your Inbox regularly 📩
                     </h5>
@@ -538,7 +538,7 @@ document.addEventListener("keydown", function(event) {
                   </div>
                 </div>
                     <div className={styles["progress-btns"]}>
-                    <button id="submitBtn">Submit✅</button>
+                    <button id="submitBtn">Submit ✅</button>
 
                     </div>
                   </div>
