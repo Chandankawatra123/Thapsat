@@ -27,7 +27,7 @@ const LoginPage = () => {
   const fetchTableData = async () => {
     try {
       // Make an API request to fetch the table data
-      const response = await fetch('http://16.171.176.249/api/viewall');
+      const response = await fetch('https://16.171.176.249/api/viewall');
       const data = await response.json();
 
       // Set the fetched table data to the state
@@ -40,7 +40,7 @@ const LoginPage = () => {
     try {
       
         console.log('Sending email:', name, age, email, state, study, custom, newsletter);
-      const response = await fetch(`http://16.171.176.249/api/sendmail?name=${name}&age=${age}&rmail=${email}&state=${state}&school=${study}`, {
+      const response = await fetch(`https://16.171.176.249/api/sendmail?name=${name}&age=${age}&rmail=${email}&state=${state}&school=${study}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ const LoginPage = () => {
   const handleDelete = async (id) => {
     try {
       // Make an API request to delete the entry
-      await fetch(`http://16.171.176.249/api/delete?id=${id}`, {
+      await fetch(`https://16.171.176.249/api/delete?id=${id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ const LoginPage = () => {
   const handleApprove = async (id, name, age, email, state, study, custom, newsletter) => {
     try {
       // Make an API request to approve the entry
-      await fetch(`http://16.171.176.249/api/mail_yes?id=${id}`, {
+      await fetch(`https://16.171.176.249/api/mail_yes?id=${id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ const LoginPage = () => {
 const handleDeny = async (id) => {
   try {
     // Make an API request to deny the entry
-    await fetch(`http://16.171.176.249/api/mail_no?id=${id}`, {
+    await fetch(`https://16.171.176.249/api/mail_no?id=${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
