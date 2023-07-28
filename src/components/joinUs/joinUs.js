@@ -564,7 +564,7 @@ document.addEventListener("keydown", function(event) {
                     <p>Collect all positive and negatives about your projects and products.</p>
                   </div>
                   <div className="block">
-                    <Image src={ticket}></Image>
+                    <Image src={ticket} loading="lazy"></Image>
                     <h3>Skill-storming events</h3>
                     <p>Participate in high-quality engaging events and learn skills.</p>
                   </div>

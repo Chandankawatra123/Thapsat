@@ -46,7 +46,7 @@ const customStyles = {
 
 const DropDown = () => {
   return (
-    <Image src={drop} alt='' width={70} height={30} />
+    <Image src={drop} alt='' width={70} height={30} loading="lazy" />
   )
 }
 
@@ -114,8 +114,8 @@ function Contact(props) {
                   <div className="btn-below">
                     <button id="button">Submit</button>
                     <h5>
-                      <Image src={arrowBent} alt="" className="arrowBent" />
-                      <Image src={arrowRight} alt='' width={30} height={30} className='arrowRight' />
+                      <Image src={arrowBent} alt="" className="arrowBent" loading="lazy" />
+                      <Image src={arrowRight} alt='' width={30} height={30} className='arrowRight' loading="lazy"/>
                       We would love to hear from you!</h5>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ function Contact(props) {
               </div>
 
               <div className="block" id="team-hero-img">
-                <Image src={email} alt="Image asset" />
+                <Image src={email} alt="Image asset" loading="lazy" />
               </div>
             </div>
           </div></motion.div>

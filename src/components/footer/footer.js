@@ -68,9 +68,9 @@ function Footer(props) {
                 </h5>
               </div>
               <div className={styles["footer-socials"]}>
-                <a rel="external noopener noreferrer" target="_blank"><Image src={twitter} alt="Image assets" /></a>
-                <a rel="external noopener noreferrer" target="_blank"><Image src={instagram} alt="Image assets" /></a>
-                <a href="https://www.linkedin.com/company/codeasia/" rel="external noopener noreferrer" target="_blank"><Image src={linkedin} alt="Image assets" /></a>
+                <a rel="external noopener noreferrer" target="_blank"><Image src={twitter} alt="Image assets" loading="lazy" /></a>
+                <a rel="external noopener noreferrer" target="_blank"><Image src={instagram} alt="Image assets" loading="lazy" /></a>
+                <a href="https://www.linkedin.com/company/codeasia/" rel="external noopener noreferrer" target="_blank"><Image src={linkedin} alt="Image assets" loading="lazy" /></a>
               </div>
             </div>
           </div>

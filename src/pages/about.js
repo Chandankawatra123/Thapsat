@@ -52,7 +52,7 @@ function About(props) {
         }}>
           <div className="page-title" style={{padding: '0', marginTop: '4%'}}>
             <div className="block" style={{ flexBasis: "50%", margin: "0 auto", textAlign: "center"}}>
-              <Image src={binaryCoding} style={{ margin: "0 auto" }} />
+              <Image src={binaryCoding}  loading="lazy" style={{ margin: "0 auto" }} />
               <div className="inter-font landing-hero">
                 <h1>Learn, collaborate, share <br /> knowledge and skills 💯</h1>
                 {/* <h2 className="gradient-text-static">interested in code.</h2> */}
@@ -84,7 +84,7 @@ function About(props) {
           </div>
         </div>
         <div className="page-section" style={{ justifyContent: "center", width: "100%" }}>
-          <Image src={growing} />
+          <Image src={growing} loading="lazy"/>
         </div>
         <div className="wave">
           <Image src={wave2} className="wave" style={{ width: "100vw" }} loading="lazy"></Image>

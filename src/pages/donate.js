@@ -36,7 +36,7 @@ export default function donate() {
                   Pipeline of Future <br /> Engineers & Entrepreneurs 🚀</h1>
                 {/* <h2 className="gradient-text-static">interested in code.</h2> */}
               </div>
-              <Image src={Bolb} style={{ margin: "0 auto" }} alt='' />
+              <Image src={Bolb} style={{ margin: "0 auto" }} alt='' loading="lazy" />
             </div>
             <div className='block'  style={{ flexBasis: "60%", margin: "0 auto", textAlign: "center" }}>
             <h3>Friendly folks, standing by 💛</h3>
