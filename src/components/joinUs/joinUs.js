@@ -538,7 +538,7 @@ document.addEventListener("keydown", function(event) {
                   </div>
                 </div>
                     <div className={styles["progress-btns"]}>
-                    <button id="submitBtn">Submit ✅</button>
+             
 
                     </div>
                   </div>
