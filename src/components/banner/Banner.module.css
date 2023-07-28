@@ -117,9 +117,7 @@
     flex-direction: column;
   }
   .banner-close {
-    position: absolute;
-    top: 10%;
-    left: 88%;
+
     min-width: 17px;
     min-height: 18px;
   }
