@@ -7,26 +7,29 @@ import { useEffect, useState } from "react";
 function EventGrid(props) {
   const [events, setEvents] = useState([
     {
-      eventName: "Ask Me Anything with Tanay Pratap",
+      eventName: "🦄 Events Coming Soon",
       eventDate: "8/28/2021",
       eventTime: "1:00 PM PST",
-      eventDesc: "Participate in high-quality, engaging events and learn skills.",
+      eventDesc: "Be a part of our exclusive AMA’s, Workshops & Speakers sessions with industry leaders! 🦄",
+      eventImg: "/images/a1.jpeg",
     },
     {
-      eventName: "Ask Me Anything with Elon Musk",
+      eventName: "🚀 Events Coming Soon",
       eventDate: "8/29/2021",
       eventTime: "2:00 PM PST",
-      eventDesc: "Participate in high-quality, engaging events and learn skills.",
+      eventDesc: "Be a part of our exclusive AMA’s, Workshops & Speakers sessions with industry leaders! 🦄",
+      eventImg: "/images/a2.jpeg",
     },
     {
-      eventName: "Ask Me Anything with Jeff Bezos",
+      eventName: "📈 Events Coming Soon",
       eventDate: "8/30/2021",
       eventTime: "3:00 PM PST",
-      eventDesc: "Participate in high-quality, engaging events and learn skills.",
+      eventDesc: "Be a part of our exclusive AMA’s, Workshops & Speakers sessions with industry leaders! 🦄",
+      eventImg: "/images/a3.jpeg",
     },
-
     // Additional events...
   ]);
+  
 
   const [doneEvent, setDoneEvent] = useState([
     {
@@ -68,7 +71,7 @@ function EventGrid(props) {
                 WebkitBackgroundClip: "text",
                 color: "transparent",
                 marginTop: "1rem",
-                maxWidth: "100%", // Full width by default
+                maxWidth: "100%", 
               }}
             >
               Event Details and Recording will be available here soon

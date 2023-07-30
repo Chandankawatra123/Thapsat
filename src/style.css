@@ -689,10 +689,11 @@ body.contact {
   flex-wrap: wrap;
   margin: 8% 10%;
   opacity: 0.99;
-  background: url("../src/icons/banner-bg.svg");
+  background: url("../src/icons/banner-bg.svg") ;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 15px;
 }
 
 .join-banner h1 {
@@ -946,8 +947,7 @@ body.contact {
   font-weight: bold;
   font-size: 44px;
 }
-.landing-hero {
-}
+
 .landing-hero h4 {
   font-family: "Inter";
   font-style: normal;
@@ -1219,7 +1219,7 @@ body.contact {
   .m {
     display: none;
   }
-  .join-banner {
+  /* .join-banner {
     flex-wrap: wrap;
     border-radius: 25px;
     display: flex;
@@ -1229,7 +1229,8 @@ body.contact {
     padding: 2rem;
     height: fit-content;
     margin: 8% 10%;
-  }
+    border-radius: 5%;
+  } */
   .join-banner p,
   .join-banner h1 {
     line-height: 2.2rem;
@@ -1428,6 +1429,7 @@ body.contact {
     justify-content: center;
     padding: 2rem !important;
     height: fit-content;
+
   }
   .join-banner p,
   .join-banner h1 {

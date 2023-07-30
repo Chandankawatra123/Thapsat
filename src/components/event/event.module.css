@@ -125,7 +125,7 @@
   margin-right: 1em !important;
 }
 .event-date-time {
-  width: 20rem;
+  /* width: 20rem; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -134,7 +134,7 @@
   padding-right: 0.5em;
   width: fit-content;
   height: 30px;
-  background: #0656eb;
+  background: #FF8514;
   border-radius: 8px;
   padding: 2%;
   font-family: "Poppins";
@@ -148,7 +148,7 @@
   padding: 2%;
   width: fit-content;
   height: 30px;
-  background: #b41fb8;
+  background:  #EE582B;
   border-radius: 8px;
   font-family: "Poppins";
   font-style: normal;

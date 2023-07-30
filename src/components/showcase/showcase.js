@@ -5,7 +5,7 @@ export default function showcase() {
     return (
         <div>
             {/* <h3 className="m">M</h3> */}
-            <div className="page-section join-banner">
+            <div className="page-section join-banner" style={{ background: "rgba(13, 55, 142, 0.8)", boxShadow: "rgba(11, 11, 57, 0.5) 0px 4px 12px", borderRadius: "18px", backdropFilter: "blur(30px)" }}>
                 <div className="ittime">
                     <h1>It’s time to start <br />
                         investing in yourself! </h1>

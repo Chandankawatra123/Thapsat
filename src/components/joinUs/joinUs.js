@@ -29,19 +29,17 @@ function JoinUs(props) {
         global.currentPage = 0;
         
 
-// Helper function to validate email format
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
-// Function to handle moving to the next form section
-// Function to handle moving to the next form section
+
 function goNext() {
   const formP = document.getElementById("formP" + global.currentPage);
 
   if (formP === null) {
-    return; // Exit the function if the element is not found
+    return; 
   }
 
   const requiredFields = formP.querySelectorAll('input[required]');
@@ -51,7 +49,7 @@ function goNext() {
   const errorMessage = document.getElementById("errorMessage");
 
   if (emptyFields.length > 0 || invalidEmailFields.length > 0) {
-    // Error handling for required fields and invalid emails for the current step
+
     if (invalidEmailFields.length > 0) {
       errorMessage.textContent = "Please ensure that email fields are valid.";
     } else {
@@ -59,7 +57,7 @@ function goNext() {
     }
     errorMessage.style.display = "block";
   } else {
-    // Hide the error message when there are no errors for the current step
+  
     errorMessage.style.display = "none";
 
     formP.style.display = "none";
@@ -69,13 +67,13 @@ function goNext() {
     if (nextFormP !== null) {
       nextFormP.style.display = "block";
     } else {
-      // If there is no next form section, call sendFormData function
+
       sendFormData();
     }
   }
 }
 
-// Rest of the code remains the same
+
 document.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     if (global.currentPage <= 4 && global.currentPage !== 3) {
@@ -214,13 +212,12 @@ document.addEventListener("keydown", function(event) {
 
           var isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
         
-          // If the click is outside the modal, close the modal and remove the event listener
+
           if (!isClickInsideElement) {
             closeModal();
             window.removeEventListener("click", handleModalClick);
           }
-        
-          // Check if the click is on either of the close buttons
+      
           const closeBtn = document.getElementById("closeBtn");
           const modalCloseBtn = document.getElementById("modal-close-btn");
         
@@ -377,7 +374,7 @@ document.addEventListener("keydown", function(event) {
                   id="formStateInput"
                   required
                   style={{
-                    // Your styles for the dropdown
+                   
                     width: '100%',
                     padding: '6px',
                     borderRadius: '15px',

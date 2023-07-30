@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-key */
+
 import TeamMember from '../components/teamMember/teamMember.js'
 
 function TeamGrid(props) {

@@ -16,7 +16,7 @@ function Event(props) {
           <div className={styles["event-text"]}>
             <h2>{props.eventName}</h2>
             <div className={styles["event-date-time"]}>
-              <h2>Date:{props.eventDate}</h2>
+              <h2>Date:COMING !!</h2>
               <h2>Time:{props.eventTime}</h2>
             </div>
             <div className={styles["event-desc"]}>
@@ -40,8 +40,8 @@ function Event(props) {
             <div className={styles["event-text"]}>
               <h2>{props.eventName}</h2>
               <div className={styles["event-date-time"]}>
-                <h2>Date : {props.eventDate}</h2>
-                <h2>Time : {props.eventTime}</h2>
+                <h2>Date : Coming!</h2>
+                <h2>Time : Soon!!</h2>
               </div>
               <div className={styles["event-desc"]}>
                 <p>{props.eventDesc}</p>
