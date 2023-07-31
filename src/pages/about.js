@@ -54,9 +54,9 @@ function About(props) {
             <div className="block" style={{ flexBasis: "50%", margin: "0 auto", textAlign: "center"}}>
               <Image src={binaryCoding}  loading="lazy" style={{ margin: "0 auto" }} />
               <div className="inter-font landing-hero">
-                <h1>Learn, collaborate, share <br /> knowledge and skills 💯</h1>
+                <h1>Learn, collaborate, share <br /> knowledge and skills </h1>
                 {/* <h2 className="gradient-text-static">interested in code.</h2> */}
-                <span>across communities by attending <br /> expert workshops and podcasts.</span>
+                <span >across communities by attending <br /> expert workshops and podcasts. 💯</span>
               </div>
             </div>
           </div></motion.div>

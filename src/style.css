@@ -45,7 +45,7 @@ html {
 }
 
 h1 {
-  margin: 0.5em 0;
+  margin: 1.2em 0;
   font-size: 44px;
   font-family: "Inter", sans-serif;
 }
@@ -416,6 +416,7 @@ body.contact {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .rgba-block {
   position: relative;
   border: 2px solid transparent;
@@ -1014,7 +1015,7 @@ body.contact {
 }
 
 #about-stats {
-  margin: 0 15%;
+  margin: 10px 15%;
   border: 2px solid transparent;
   border-radius: 20px;
   border-image-slice: 1;
@@ -1210,6 +1211,8 @@ body.contact {
   }
 }
 @media screen and (max-width: 1035px) {
+  .page-section {
+    padding: 0% 0%;}
   .wave {
     margin: 4rem 0rem;
   }
@@ -1360,6 +1363,8 @@ body.contact {
   }
 }
 @media screen and (max-width: 890px) {
+  .page-section {
+    padding: 0% 0%;}
   .events-grid {
     display: flex;
     width: fit-content;
@@ -1371,6 +1376,8 @@ body.contact {
 }
 
 @media screen and (max-width: 768px) {
+  .page-section {
+    padding: 0% 0%;}
   p {
     font-size: 16px !important;
   }
@@ -1577,13 +1584,17 @@ body.contact {
     /* border: 2px solid red; */
     width: 30%;
   }
+  .page-section {
+    padding: 0% 0%;}
 }
 
 @media screen and (max-width: 576px) {
   #about-stats {
     flex-direction: row !important;
-    margin: 0 5%;
+    margin: 5px 5%;
   }
+  .page-section {
+    padding: 0% 0%;}
   #about-stats h1,
   #about-stats h2 {
     font-size: 12px !important;
