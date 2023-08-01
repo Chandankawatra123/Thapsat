@@ -154,7 +154,7 @@ document.addEventListener("keydown", function(event) {
             });
         
             if (results) {
-              alert("Your form is submitted!");
+             
             }
           }
         };
