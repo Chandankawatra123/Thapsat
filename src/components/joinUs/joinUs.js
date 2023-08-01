@@ -447,9 +447,10 @@ document.addEventListener("keydown", function(event) {
           
                 <div className={styles["individual-cards"]} id="formP4" style={{ display: "none" }}>
   <div className={styles["question-container"]}>
-    <div className={`${styles["popup-questions"]} ${styles["radio-options"]}`}>
+  <div className={`${styles["popup-questions"]} ${styles["radio-options"]}`} >
     <p id="errorMessage" style={{ display: 'none', color: 'red' }}></p>
-      <h3>You study in...</h3>
+    <h3 >You study in...</h3>
+
       <div className={styles["radio-option"]}>
         <input id="formSchoolInput" onClick={getSelected} name="school" type="radio" value="high school" required></input>
         <label htmlFor="high school">High School</label>
@@ -459,7 +460,7 @@ document.addEventListener("keydown", function(event) {
         <label htmlFor="college">College</label>
       </div>
     </div>
-    <div className={styles["popup-questions"]}>
+    <div className={styles["popup-questions"]} style={{ marginBottom: '5rem' }}>
     <p id="errorMessage" style={{ display: 'none', color: 'red' }}></p>
       <h3>What inspires you to join CodeAsia's slack community?</h3>
       <input id="formStateInput1" name="custom" type="text" placeholder="Type your answer here..." required maxLength={40}></input>
