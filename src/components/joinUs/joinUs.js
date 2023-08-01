@@ -148,7 +148,7 @@ document.addEventListener("keydown", function(event) {
               }
             }
         
-            let results = fetch(`https://16.171.176.249/api/form_entry?name=${name}&age=${age}&email=${email}&state=${state}&study=${study}&custom=${custom}&newsletter=${newsletter}`, {
+            let results = fetch(`https://fun.codeasia.org/api/form_entry?name=${name}&age=${age}&email=${email}&state=${state}&study=${study}&custom=${custom}&newsletter=${newsletter}`, {
               method: "POST",
               headers: { 'Content-Type': 'application/json' },
             });
@@ -174,7 +174,7 @@ document.addEventListener("keydown", function(event) {
           }
         };
         
-        const api = 'http://16.171.176.249/api/viewall';
+        const api = 'https://fun.codeasia.org/api/viewall';
         
         const fetchData = async () => {
           useEffect(() => {
