@@ -133,7 +133,7 @@ const LoginPage = () => {
 const handleDeny = async (id) => {
   try {
     // Make an API request to deny the entry
-    await fetch(`https://20.193.148.216/api/mail_no?id=${id}`, {
+    await fetch(`https://fun.codeasia.org/api/mail_no?id=${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
