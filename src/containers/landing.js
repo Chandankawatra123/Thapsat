@@ -66,7 +66,7 @@ function Landing(props) {
               <p>CodeAsia is a tech startup fostering a like-minded community of individuals of students and nurturing the best makers & coders.</p>
             </div>
             <a className="link-btn join-btn">
-              <span> Join Community <h5 className="party">🎉</h5></span>
+              <span> <b> Join Community</b> <h5 className="party">🎉</h5></span>
             </a>
           </div>
           <div id="landing-community" className="block">

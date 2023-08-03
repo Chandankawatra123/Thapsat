@@ -78,7 +78,7 @@
   cursor: pointer;
   z-index: 100;
   transition: opacity 0.5s ease;
-  background: #B4B5B1;
+  background: rgb(48, 56, 56);
   border-radius: 50%;
 }
 

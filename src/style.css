@@ -1376,6 +1376,15 @@ body.contact {
 }
 
 @media screen and (max-width: 768px) {
+  .landing-hero p {
+    text-align: center;
+  }
+  .block h4 {
+    margin: -10px;
+  }
+  .landing-hero h4,.landing-hero h5, .landing-heroh1 {
+    text-align: center;
+  }
   .page-section {
     padding: 0% 0%;}
   p {
@@ -1384,6 +1393,7 @@ body.contact {
   h1,
   .overlay-big {
     font-size: 24px !important;
+    text-align: center;
   }
   h4,
   .overlay {
@@ -1415,7 +1425,7 @@ body.contact {
     line-height: 40px;
     color: #fefefe;
     text-shadow: 0px 0px 44px rgba(0, 0, 0, 0.2);
-    margin: 0;
+    margin: 0px;
   }
   .page-section {
     flex-direction: column;
