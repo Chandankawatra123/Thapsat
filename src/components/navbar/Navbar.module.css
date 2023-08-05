@@ -204,7 +204,8 @@
     margin: 0.5em 0;
   }
   .header a:not(:global(.link-btn)) {
-    padding: 0.5em;
+    /* padding: 0.5em; */
+    margin: -2px -17px;
   }
   .nav-menu {
     padding-bottom: 1.5em;

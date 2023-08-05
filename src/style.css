@@ -45,7 +45,7 @@ html {
 }
 
 h1 {
-  margin: 1.2em 0;
+  margin: 0.2em 0;
   font-size: 44px;
   font-family: "Inter", sans-serif;
 }
@@ -961,7 +961,7 @@ body.contact {
 .landing-hero h5 {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 22px;
   line-height: 160%;
   color: #fefefe;
@@ -1281,6 +1281,8 @@ body.contact {
   }
   .page-section .cardcontainer .card {
     width: fit-content;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   .page-section #block {
     margin: 2%;

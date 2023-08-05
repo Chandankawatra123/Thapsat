@@ -87,6 +87,7 @@
 }
 
 
+
 .individual-cards {
   padding: 0 10%;
   display: flex;
@@ -111,7 +112,7 @@
 }
 
 .popup-questions {
-  margin-bottom: 30%;
+  margin-bottom: 15%;
 }
 
 .radio-options {
