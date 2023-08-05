@@ -1414,6 +1414,8 @@ body.contact {
   .link-btn {
     font-size: 12px;
     padding: 10px;
+    margin-left: 27%;
+    margin-bottom: 25px;
   }
   .page-title {
     flex-direction: column-reverse;
