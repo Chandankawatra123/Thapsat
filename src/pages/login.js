@@ -66,7 +66,7 @@ const LoginPage = () => {
 
   const handleLogin = () => {
     // Perform login validation here
-    if (username === 'chandan' && password === 'chandan') {
+    if (username === 'vansh' && password === 'letsbuildthefuture@1008') {
       setIsLoggedIn(true);
       setErrorMessage('');
     } else {
