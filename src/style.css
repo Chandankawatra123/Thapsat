@@ -38,6 +38,12 @@
   );
   --gradient-1: linear-gradient(90.26deg,#1a6aff,#d817f8 49.45%,#ffa51e 99.95%);
   --gradient-2: linear-gradient(99.01deg,rgba(77,228,138,0.457),rgba(238,88,43,0.6) 51.04%,rgba(32,137,249,0.6));
+
+  --yellow: #ff8c19;
+  --orange: #fe6734;
+  --pink: #b41fb8;
+  --green: #3bb179;
+  --blue: #0656eb;
 }
 
 html {
@@ -509,6 +515,7 @@ body.contact {
 .highlight-yellow {
   color: var(--yellow);
 }
+
 
 .highlight-orange {
   color: var(--orange);
