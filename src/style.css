@@ -222,7 +222,7 @@ body.contact {
 .link-btn::before {
   content: "";
   position: absolute;
-  z-index: -1;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
@@ -1540,10 +1540,10 @@ body.contact {
         #015aff 100%
       );
   }
-  #landing-community {
+  /* #landing-community {
     padding-left: 1em;
-  }
-  .commmunity {
+  } */
+  .community {
     display: flex;
     margin-left: 3rem;
     display: none;

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const LoginPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const [slackid, setSlackId] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -40,7 +40,7 @@ const LoginPage = () => {
     try {
       
         console.log('Sending email:', name, age, email, state, study, custom, newsletter);
-      const response = await fetch(`https://fun.codeasia.org/api/sendmail?name=${name}&age=${age}&rmail=${email}&state=${state}&school=${study}`, {
+      const response = await fetch(`https://fun.codeasia.org/api/sendmail?name=${name}&age=${age}&school=${study}&rmail=${email}&state=${state}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -146,7 +146,37 @@ const handleDeny = async (id) => {
     console.error('Error denying entry:', error);
   }
 };
-    
+
+
+  const handleSubmitSlack = async () => {
+    try {
+      console.log('Slack ID:', slackid);
+
+  
+      const response = await fetch(`https://fun.codeasia.org/api/?slack_id=${slackid}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        console.log('Data sent successfully.');
+      } else {
+        console.error('Error while sending data:', response.status, response.statusText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  
+  const handleInputChange = (event) => {
+    setSlackId(event.target.value);
+  };
+
+
+
  
   return (
     <div className="container-fluid" style={{ backgroundColor: '#003152', minHeight: '100vh', padding: '20px' }}>
@@ -210,7 +240,20 @@ const handleDeny = async (id) => {
               </tbody>
             </table>
           </div>
+          <div>
+      <input
+        type="text"
+        id="slackk"
+        placeholder=" SlackLink"
+        value={slackid}
+        onChange={handleInputChange}
+      />
+      <button onClick={handleSubmitSlack} className="btn btn-primary">
+        Update Slack
+      </button>
+    </div>
         </div>
+        
       ) : (
         <>
           <input

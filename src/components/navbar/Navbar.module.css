@@ -42,7 +42,7 @@
   transition: background-color 0.25s ease;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  margin-top: 2rem;
+  margin-top: -1rem;
 }
 
 .header-img {
