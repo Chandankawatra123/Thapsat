@@ -297,7 +297,7 @@ body.contact {
   display: flex;
 }
 .page-section .cardcontainer .card .inner-card {
-  width: 100%;
+  width: 83%;
   margin: auto;
   height: 100%;
   background-color: #040f26;
@@ -1615,7 +1615,7 @@ body.contact {
 @media screen and (max-width: 576px) {
   #about-stats {
     flex-direction: row !important;
-    margin: 5px 5%;
+   margin: 5px 12%;
   }
   .page-section {
     padding: 0% 0%;}
