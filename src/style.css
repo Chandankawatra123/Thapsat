@@ -306,6 +306,49 @@ body.contact {
   border-radius: 32px;
   padding: 10% 7% 8.5% 7%;
 }
+.gradient-animation {
+  position: relative;
+}
+
+.gradient-text-1,
+.gradient-text-2,
+.gradient-text-3,
+.gradient-text-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  opacity: 1;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+
+.gradient-text-static {
+  background-image: var(--gradient-1);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+
+.gradient-text-1 {
+  background-image: var(--gradient-1);
+  background-position: center;
+  animation: 10s revealGradient 3s ease infinite;
+}
+
+@keyframes revealGradient {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 .page-container .cardcontainer .card span {
   position: relative;
@@ -977,7 +1020,7 @@ body.contact {
   color: #fefefe;
   text-shadow: 0px 0px 44px rgba(0, 0, 0, 0.2);
 }
-.landing-hero h1 {
+/* .landing-hero h1 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -994,7 +1037,7 @@ body.contact {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
+} */
 .landing-hero p {
   margin-bottom: 2rem;
   font-family: "Inter";
@@ -1388,6 +1431,19 @@ body.contact {
 }
 
 @media screen and (max-width: 768px) {
+  .landing-hero h1 {
+
+    background: linear-gradient(
+      88.42deg,
+      #015aff 2.68%,
+      #d817f8 51.26%,
+      #ffa51e 97.86%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 18px;
+  } 
   .landing-hero p {
     text-align: center;
   }
@@ -1406,6 +1462,9 @@ body.contact {
   .overlay-big {
     font-size: 24px !important;
     text-align: center;
+  }
+  .overlay-big{
+    display: none;
   }
   h4,
   .overlay {
@@ -1505,6 +1564,7 @@ body.contact {
   }
   .landing-hero p {
     margin: 1rem 0;
+    text-align: center;
   }
   body.landing {
     background: radial-gradient(

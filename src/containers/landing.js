@@ -55,10 +55,12 @@ function Landing(props) {
           <div className="block" style={{ flexBasis: "45%", marginLeft: '-1.5%'}}>
             <div className="inter-font landing-hero">
               <div className="gradient-animation">
-                <h5>Don't Code Alone</h5>
+              <h5>Don't Code Alone</h5>
+           
               </div>
               <div className="gradient-animation">
                 <h1>Code With A Community.</h1>
+                <div className="overlay-big gradient-text-1">Code With A Community.</div>
               </div>
               <div className="gradient-animation">
                 <h4>Building Asia’s Most Collaborative <br></br> Community of Students 🚀</h4>
