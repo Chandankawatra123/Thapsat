@@ -153,7 +153,7 @@ const handleDeny = async (id) => {
       console.log('Slack ID:', slackid);
 
   
-      const response = await fetch(`https://fun.codeasia.org/api/slack_id/?slack_id=${slackid}`, {
+      const response = await fetch(`https://fun.codeasia.org/api/slack_id?slack_id=${slackid}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
