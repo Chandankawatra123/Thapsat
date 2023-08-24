@@ -454,19 +454,35 @@ document.addEventListener("keydown", function(event) {
       <input id="formStateInput1" name="custom" type="text" placeholder="Type your answer here..." required maxLength={40}></input>
     </div>
   </div>
-  <div id = "kk"className={`${styles["popup-questions"]} ${styles["radio-options"]}`} >
-    <p id="errorMessage" style={{ display: 'none', color: 'red' }}></p>
-    <h3 >You study in...</h3>
+  <div id="kk" className={`${styles["popup-questions"]} ${styles["radio-options"]}`}>
+  <p id="errorMessage" style={{ display: 'none', color: 'red' }}></p>
+  <h3>You study in...</h3>
 
-      <div className={styles["radio-option"]}>
-        <input id="formSchoolInput" onClick={getSelected} name="school" type="radio" value="high school" required></input>
-        <label htmlFor="high school">High School</label>
-      </div>
-      <div className={styles["radio-option"]}>
-        <input id="formSchoolInput" onClick={getSelected} name="school" type="radio" value="college"></input>
-        <label htmlFor="college">College</label>
-      </div>
-    </div>
+  <div className={styles["radio-option"]}>
+    <input
+      id="highSchoolInput"
+      onClick={getSelected}
+      name="school"
+      type="radio"
+      value="high school"
+      required
+    />
+    <label htmlFor="highSchoolInput">High School</label>
+  </div>
+  <div className={styles["radio-option"]}>
+    <input
+      id="collegeInput"
+      onClick={getSelected}
+      name="school"
+      type="radio"
+      value="college"
+    />
+    <label htmlFor="collegeInput">College</label>
+  </div>
+</div>
+
+
+
   <div className={styles.progress}>
     <div style={{ display: "inline-block", flexGrow: "1", marginRight: "1em" }}>
       <span>80% completed</span>
@@ -489,18 +505,31 @@ document.addEventListener("keydown", function(event) {
 
                 <div className={styles["individual-cards"]} id="formP5" style={{display: "none" }}>
                 
-                  <div className={`${styles["popup-questions"]} ${styles["radio-options"]}`}>
-                  <p id="errorMessage" style={{ display: 'none', color: 'red' }}></p>
-                    <h3>Do you want our newletters delivered to your inbox?</h3>
-                    <div className={styles["radio-option"]}>
-                      <input id="formNewsletterInput" onClick={getSelected} name="newsletter" type="radio" value={true} re></input>
-                      <label for="true">Yeah, sure!</label>
-                    </div>
-                    <div className={styles["radio-option"]}>
-                      <input id="formNewsletterInput" onClick={getSelected} name="newsletter" type="radio" value={false}></input>
-                      <label for="false">I'm not interested</label>
-                    </div>                    
-                  </div>
+                <div className={`${styles["popup-questions"]} ${styles["radio-options"]}`}>
+                <p id="errorMessage" style={{ display: 'none', color: 'red' }}></p>
+                <h3>Do you want our newsletters delivered to your inbox?</h3>
+                <div className={styles["radio-option"]}>
+                  <input
+                    id="newsletterTrueInput"
+                    onClick={getSelected}
+                    name="newsletter"
+                    type="radio"
+                    value={true}
+                  />
+                  <label htmlFor="newsletterTrueInput">Yeah, sure!</label>
+                </div>
+                <div className={styles["radio-option"]}>
+                  <input
+                    id="newsletterFalseInput"
+                    onClick={getSelected}
+                    name="newsletter"
+                    type="radio"
+                    value={false}
+                  />
+                  <label htmlFor="newsletterFalseInput">I'm not interested</label>
+                </div>
+              </div>
+              
                                    
                   <div className={styles.progress}>
                     <div style={{ display: "inline-block", flexGrow: "1", marginRight: "1em"}}>
