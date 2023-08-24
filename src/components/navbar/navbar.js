@@ -109,10 +109,10 @@ function Navbar(props) {
               <a>Contact Us</a>
             </Link>
             <div className={styles["nav-btns"]} style={{ marginTop: "-1rem" }}>
-              <a className={`${styles["nav-link-btn"]} link-btn join-btn`}>
-                Join Us
-              </a>
-            </div>
+            <a className={`${styles["nav-link-btn"]} link-btn join-btn`}>
+              Join Us
+            </a>
+          </div>
           </div>
         ) : null}
       </header>

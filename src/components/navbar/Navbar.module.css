@@ -193,8 +193,8 @@
     margin-top: 1rem;
   }
   .nav-menu a {
-    color: white;
-    width: 100%;
+    /* color: white;
+    width: 100%; */
     text-align: center;
   }
   .nav-btns {
@@ -218,5 +218,22 @@
     max-width: 40%;
     height: 3rem;
     padding: 0.75rem 0;
+  }
+
+  .nav-btns {
+    marginTop: -1rem;
+  }
+  
+  .nav-link-btn {
+    padding: 0.6rem 3.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    /* border: #dd4e99 solid; */
+    border-radius: 14px;
+    background: var(--gradient-1);
+  }
+  
+  .join-btn {
+    border: 1px solid linear-gradient(99.01deg,rgba(77,228,138,0.457),rgba(238,88,43,0.6) 51.04%,rgba(32,137,249,0.6)) !important;
   }
 }
