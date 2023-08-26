@@ -11,7 +11,7 @@ function Event(props) {
       <>
         <div className={styles["event-card"]}>
           <div className={styles["event-img"]}>
-            <Image src={props.eventImg} alt='event-img' loading="lazy" />
+            <Image src={props.eventImg} alt='event-img' loading="lazy" height={260} width={225}/>
           </div>
           <div className={styles["event-text"]}>
             <h2>{props.eventName}</h2>
@@ -37,6 +37,7 @@ function Event(props) {
             <div className={styles["event-img"]}>
               <Image src={defaultImg} loading="lazy" />
             </div>
+
             <div className={styles["event-text"]}>
               <h2>{props.eventName}</h2>
               <div className={styles["event-date-time"]}>

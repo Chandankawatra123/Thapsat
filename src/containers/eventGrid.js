@@ -1,5 +1,5 @@
 import Event from "../components/event/event.js";
-import EventDone from "../components/eventDone/eventDone";
+import EventDone from "../components/eventDone/eventDone.js";
 import search from "../icons/search.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -29,7 +29,6 @@ function EventGrid(props) {
     },
     // Additional events...
   ]);
-  
 
   const [doneEvent, setDoneEvent] = useState([
     {
@@ -91,7 +90,14 @@ function EventGrid(props) {
                 eventTime={event.eventTime}
                 eventDesc={event.eventDesc}
                 eventTags={event.eventTags}
-              />
+                // eventImg={event.eventImg}
+              >
+                <Image
+                  src={event.eventImg}
+                  width={100}
+                  height={300}
+                />
+              </Event>
             );
           })}
         </div>
