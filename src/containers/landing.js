@@ -72,7 +72,14 @@ function Landing(props) {
             </a>
           </div>
           <div id="landing-community" className="block">
-            <Image src={community} className='commmunity' alt='' loading="lazy" />
+          <Image
+          src={community}
+          className='community'
+          alt=''
+          loading="lazy"
+          srcSet={`${community} 320w, ${community} 768w, ${community} 1024w`}
+          sizes="(max-width: 767px) 100vw, (max-width: 1023px) 80vw, 50vw"
+        />
           </div>
         </div>
         <div className="page-section gradient-bg-right" style={{ justifyContent: "space-around", alignItems: "flex-start", marginLeft: '2rem' }}>
